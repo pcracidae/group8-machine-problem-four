@@ -7,11 +7,30 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-    </body>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styles.css">
+</head>
+<body>
+     <!-- header-->
+    <%@ include file="/WEB-INF/header.jsp" %>
+    
+    <main>
+    <form action="LoginServlet" method="post">
+        <div class="container">
+            <h2>Login</h2>
+            
+            <hr>
+            
+            <input type="text" name="username" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <button class="btn login" type="submit">Login</button>
+        </div>
+    </form>
+    </main>
+    
+    <!-- footer-->
+    <%@ include file="/WEB-INF/footer.jsp" %>
+</body>
 </html>
